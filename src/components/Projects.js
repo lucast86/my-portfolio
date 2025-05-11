@@ -9,7 +9,7 @@ const projects = [
         title: 'Administración Mutual',
         simpleDescription: 'Sistema de gestión de préstamos.', 
         extensiveDescription: 'Sistema de gestión de préstamos en que realizamos alta y baja de los mismos, con todo lo relacionado a las líneas y tasas culminando con la cobranza y contabilidad',
-        url: 'https://mi-tienda.com',
+        url: '',
         img: imageMutual 
     },
     { 
@@ -41,59 +41,59 @@ const Projects = () => {
   };
 
   return (
-    <Box
-    sx={{
-      backgroundColor: '#f5f5f5',
-      padding: '40px 16px',
-    }}
-  >
-      <Typography variant="h4" align="center" gutterBottom sx={{m: 8, textShadow: '0.5px 0.5px 1px #172D82'}}>
-        Mis Proyectos
-      </Typography>
-      <Grid container spacing={4}>
-        {projects.map((project, index) => (
-          <Grid item xs={12} md={4} key={index}>
-            <Card
-             sx={{
-              boxShadow: '0px 4px 8px #172D82', // Sombra personalizada en azul
-              transition: 'box-shadow 0.3s ease-in-out', // Animación de la sombra
-              '&:hover': {
-              boxShadow: '0px 6px 12px #0055CC', // Sombra más intensa al hacer hover
-             }}}
-            >
-              <CardMedia component="img" height="240" image={project.img} />
-              <CardContent>
-                <Typography variant="h5">{project.title}</Typography>
-                <Typography>{project.simpleDescription}</Typography>
-                {/* Botón para alternar más detalles */}
-                <Button 
-                  size="small" 
-                  onClick={() => toggleExpand(index)} 
-                  sx={{ mt: 2 }}
-                >
-                  {expanded[index] ? 'Ver menos' : 'Ver más'}
-                </Button>
+        <Box
+            sx={{
+                backgroundColor: '#f5f5f5',
+                padding: '40px 16px' ,
+            }}
+        >
+            <Typography variant="h4" align="center" gutterBottom sx={{m: 8, textShadow: '0.5px 0.5px 1px #172D82'}}>
+                Mis Proyectos
+            </Typography>
+            <Grid container spacing={4} justifyContent="center">
+                {projects.map((project, index) => (
+                <Grid item xs={11} md={3.5} key={index}>
+                    <Card
+                        sx={{
+                            boxShadow: '0px 4px 8px #172D82', // Sombra personalizada en azul
+                            transition: 'box-shadow 0.3s ease-in-out', // Animación de la sombra
+                            '&:hover': {
+                            boxShadow: '0px 6px 12px #0055CC', // Sombra más intensa al hacer hover
+                        }}}
+                    >
+                    <CardMedia component="img" height="240" image={project.img} />
+                    <CardContent>
+                        <Typography variant="h5">{project.title}</Typography>
+                        <Typography>{project.simpleDescription}</Typography>
+                        {/* Botón para alternar más detalles */}
+                        <Button 
+                        size="small" 
+                        onClick={() => toggleExpand(index)} 
+                        sx={{ mt: 2 }}
+                        >
+                        {expanded[index] ? 'Ver menos' : 'Ver más'}
+                        </Button>
 
-                {/* Información adicional en Collapse */}
-                <Collapse in={expanded[index]} timeout="auto" unmountOnExit>
-                  <Typography sx={{ mt: 2 }}>{project.extensiveDescription}</Typography>
-                  <Button 
-                    href={project.url} 
-                    target="_blank" 
-                    rel="noopener" 
-                    size="small" 
-                    sx={{ mt: 1 }}
-                  >
-                    Ir al Proyecto
-                  </Button>
-                </Collapse>
-              </CardContent>
-            </Card>
-          </Grid>
-        ))}
-      </Grid>
-    </Box>
-  );
-};
+                        {/* Información adicional en Collapse */}
+                        <Collapse in={expanded[index]} timeout="auto" unmountOnExit>
+                        <Typography sx={{ mt: 2 }}>{project.extensiveDescription}</Typography>
+                        <Button 
+                            href={project.url} 
+                            target="_blank" 
+                            rel="noopener" 
+                            size="small" 
+                            sx={{ mt: 1 }}
+                        >
+                            Ir al Proyecto
+                        </Button>
+                        </Collapse>
+                    </CardContent>
+                    </Card>
+                </Grid>
+                ))}
+            </Grid>
+        </Box>
+    );
+    };
 
 export default Projects

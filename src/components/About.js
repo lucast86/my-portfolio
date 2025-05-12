@@ -23,7 +23,7 @@ const About = () => {
                     ¡Hola! Soy Lucas Trento
                 </Typography>
                 <Typography variant="h6" color="inherit">
-                Soy Técnico en Desarrollo de Software y desarrollador Full Stack
+                Soy Técnico en Desarrollo de Software y desarrollador Full Stack.
                 Conmigo obtendrás un programador con ganas de aprender siempre nuevas tecnologías y de adaptarse fácilmente a diferentes equipos de trabajo, con responsabilidad y dedicación.
                 </Typography>
             </Container>

@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Box, Grid, Card, CardContent, CardMedia, Typography, Button, Collapse } from '@mui/material';
 import imageBeer from '../../src/assets/images/numerBeer.jpg'
 import imageMutual from '../../src/assets/images/mutual.png'
+import imageItati from '../../src/assets/images/itati.png'
 
 const projects = [
     { 
@@ -23,8 +24,8 @@ const projects = [
         title: 'Numer Beer', 
         simpleDescription: 'Tienda online Venta de Cerveza.', 
         extensiveDescription: '',
-        url: 'https://numenbeer.netlify.app/',
-        img: imageBeer 
+        url: 'https://itatiartesania.netlify.app/',
+        img: imageItati 
     },
 ];
 

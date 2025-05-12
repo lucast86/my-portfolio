@@ -21,9 +21,9 @@ const projects = [
         img: imageBeer 
     },
     { 
-        title: 'Numer Beer', 
-        simpleDescription: 'Tienda online Venta de Cerveza.', 
-        extensiveDescription: '',
+        title: 'Itati Artesanias', 
+        simpleDescription: 'Tejidos e hilados.', 
+        extensiveDescription: 'En Itatí, encontrás piezas únicas, realizadas en todo tipo de lana o hilo.',
         url: 'https://itatiartesania.netlify.app/',
         img: imageItati 
     },
